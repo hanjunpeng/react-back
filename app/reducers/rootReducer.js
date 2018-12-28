@@ -1,8 +1,10 @@
-import { combineReducers } from 'redux'
-//引入每个页面的reducer
-import user from './user'
+import {
+  combineReducers
+} from "redux";
+import user from "./user";
+import login from "./login";
 var rootReducer = combineReducers({
-  user
-})
-
-export default rootReducer
+  user,
+  login,
+});
+export default rootReducer;
