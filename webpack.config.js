@@ -7,23 +7,23 @@ module.exports = {
     filename: 'bundle.js' // 打包后的js文件
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/, // 屏蔽不需要处理的文件 文件夹
-        loader: 'bebel-loader'
+        loader: ('bebel-loader')
       },
       {
         test: /|.css$/,
-        loader: 'style-loader!css-loader'
+        loader: ('style-loader!css-loader')
       },
       {
         test: /\.less$/,
-        loader: 'style-loader!css-loader!less-lolader'
+        loader: ('style-loader!css-loader!less-lolader')
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=10000'
+        loader: ('url-loader?limit=10000')
       }
     ],
     devServer: {
